@@ -26,6 +26,7 @@ object RetrofitClient {
 
     val retrofitInstance: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
+        .client(httpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 }
